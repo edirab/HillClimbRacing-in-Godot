@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=4]
+
+[node name="Level1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -602, 511, 251, 507, 1270, 494, 2812, 337, 3371, -134, 3803, -477, 5060, -723, 5468, -723, 5460, 1761, -3480, 1746, -3482, -462, -1902, -494, -1058, -3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -358, 136 )
+script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 1.7, 1.7 )
+offset_h = 0.64
+drag_margin_left = 0.7
+editor_draw_drag_margin = true
+
+[node name="Player2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 507, 243 )
+
+[node name="Player3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1239, -48 )

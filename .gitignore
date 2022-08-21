@@ -1,0 +1,8 @@
+.vscode/
+.import/
+addons/
+gut/
+
+*.import
+Scripts/linux
+scripts/windows
