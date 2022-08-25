@@ -1,10 +1,48 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Images/Car/Car.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Wheel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=3]
+[ext_resource path="res://Images/Characters/Head.png" type="Texture" id=4]
+[ext_resource path="res://Images/Characters/Body.png" type="Texture" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 68.0
 
 [node name="Player" type="RigidBody2D" groups=["player"]]
+collision_layer = 2
 gravity_scale = 30.0
+script = ExtResource( 3 )
+
+[node name="Character" type="Node2D" parent="."]
+
+[node name="NeckSprite" type="Sprite" parent="Character"]
+position = Vector2( -24, -74 )
+texture = ExtResource( 5 )
+
+[node name="HeadRigitBody2D" type="RigidBody2D" parent="Character" groups=["player"]]
+collision_layer = 4
+mass = 0.21
+
+[node name="HeadSprite" type="Sprite" parent="Character/HeadRigitBody2D"]
+position = Vector2( -31, -137 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character/HeadRigitBody2D"]
+position = Vector2( -31, -137 )
+shape = SubResource( 1 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Character"]
+position = Vector2( -47, -77 )
+node_a = NodePath("../HeadRigitBody2D")
+node_b = NodePath("../..")
+softness = 2.56
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Character"]
+position = Vector2( -10, -77 )
+node_a = NodePath("../HeadRigitBody2D")
+node_b = NodePath("../..")
+softness = 2.2
 
 [node name="Car" type="Sprite" parent="."]
 position = Vector2( 29, -20 )
@@ -29,3 +67,9 @@ node_b = NodePath("Wheel")
 softness = 2.02
 
 [node name="Wheel" parent="WheelHolder2" instance=ExtResource( 2 )]
+
+[node name="GameOverTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
