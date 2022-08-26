@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Images/Pickups/Coin5.png" type="Texture" id=1]
 [ext_resource path="res://FredokaOne-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Images/Pickups/Fuel.png" type="Texture" id=3]
+[ext_resource path="res://Images/Other/Alarm.png" type="Texture" id=4]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.533333, 0.870588, 0.266667, 1 )
@@ -29,6 +30,32 @@ expand_margin_right = 6.0
 expand_margin_top = 6.0
 expand_margin_bottom = 6.0
 
+[sub_resource type="Animation" id=4]
+resource_name = "Idle"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Alarm:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "alarm"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Alarm:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.001 )
+}
+
 [sub_resource type="DynamicFont" id=1]
 size = 60
 outline_size = 2
@@ -53,6 +80,19 @@ custom_styles/fg = SubResource( 3 )
 custom_styles/bg = SubResource( 2 )
 value = 50.0
 percent_visible = false
+
+[node name="Alarm" type="TextureRect" parent="Fuel"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 329.0
+margin_top = 8.0
+margin_right = 376.0
+margin_bottom = 55.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fuel"]
+anims/Idle = SubResource( 4 )
+anims/alarm = SubResource( 5 )
 
 [node name="CoinCounter" type="TextureRect" parent="."]
 margin_left = 1.0

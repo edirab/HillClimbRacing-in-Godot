@@ -6,6 +6,7 @@ var max_speed = 50
 
 var fuel = 100
 var dead = false
+var driving = 0
 
 func _ready():
 	wheels = get_tree().get_nodes_in_group("wheel")
@@ -13,16 +14,20 @@ func _ready():
 
 func _physics_process(delta):
 	
+	driving = 0
+	
 	if fuel > 0 && !dead:
 		$GameOverTimer.stop()
 		if Input.is_action_pressed("ui_right"):
-			use_fuel(delta)
+			driving += 1
+			apply_torque_impulse(-4000 * delta * 60)
 			for wheel in wheels:
 				if wheel.angular_velocity < max_speed:
 					wheel.apply_torque_impulse(speed * delta * 60)
 
 		if Input.is_action_pressed("ui_left"):
-			use_fuel(delta)
+			driving += 1
+			apply_torque_impulse(2000 * delta * 60)
 			for wheel in wheels:
 				if wheel.angular_velocity > -max_speed:
 					wheel.apply_torque_impulse( -speed * delta * 60)
@@ -31,6 +36,12 @@ func _physics_process(delta):
 			$GameOverTimer.start()
 	if $Character.rotation_degrees < -90 || rotation_degrees > 90 && !dead:
 		dead = true
+
+	if driving == 1:
+		use_fuel(delta)
+		$EngineSound.pitch_scale = lerp($EngineSound.pitch_scale, 2, 2*delta)
+	else:
+		$EngineSound.pitch_scale = lerp($EngineSound.pitch_scale, 1, 2*delta)
 
 func refuel():
 	fuel = 100
