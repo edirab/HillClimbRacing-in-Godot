@@ -75,6 +75,7 @@ one_shot = true
 
 [node name="EngineSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = -11.064
 autoplay = true
 
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]
