@@ -70,6 +70,9 @@ margin_right = 62.0
 margin_bottom = 62.0
 texture = ExtResource( 3 )
 expand = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="ProgressBar" type="ProgressBar" parent="Fuel"]
 margin_left = 76.0
@@ -101,6 +104,9 @@ margin_right = 63.0
 margin_bottom = 119.0
 texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Counter" type="Label" parent="CoinCounter"]
 margin_left = 75.0
