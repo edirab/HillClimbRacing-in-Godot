@@ -34,8 +34,8 @@ func _physics_process(delta):
 	else:
 		if $GameOverTimer.is_stopped():
 			$GameOverTimer.start()
-	if $Character.rotation_degrees < -90 || rotation_degrees > 90 && !dead:
-		dead = true
+#	if ($Character/HeadRigitBody2D.rotation_degrees < -90 || rotation_degrees > 90) && !dead:
+#		dead = true
 
 	if driving == 1:
 		use_fuel(delta)
@@ -55,3 +55,10 @@ func use_fuel(delta):
 
 func _on_GameOverTimer_timeout():
 	get_tree().reload_current_scene()
+
+
+func _on_HeadRigitBody2D_body_entered(body):
+	print("Body entered head")
+	if body.is_in_group("ground") && !dead:
+		print("Now dead")
+		dead = true
