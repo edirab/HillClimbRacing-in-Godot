@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=2]
+[gd_scene load_steps=116 format=2]
 
 [ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=1]
 [ext_resource path="res://addons/rmsmartshape/shapes/point_array.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Level2.gd" type="Script" id=13]
 [ext_resource path="res://Scenes/Fuel.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Resource" id=21]
 script = ExtResource( 6 )
@@ -749,7 +750,7 @@ position = Vector2( 14543, 1606 )
 rotation = -2.95467
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-rotation = 0.000661098
+rotation = 0.606794
 current = true
 zoom = Vector2( 0.7, 0.7 )
 offset_h = 0.6
@@ -850,3 +851,6 @@ position = Vector2( 12692, 787 )
 
 [node name="Fuel3" parent="." instance=ExtResource( 14 )]
 position = Vector2( 22418, -960 )
+
+[node name="Coin" parent="." instance=ExtResource( 15 )]
+position = Vector2( 14508, 1996 )

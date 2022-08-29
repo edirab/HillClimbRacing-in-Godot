@@ -27,6 +27,8 @@ texture = ExtResource( 5 )
 [node name="HeadRigitBody2D" type="RigidBody2D" parent="Character" groups=["player"]]
 collision_layer = 4
 mass = 0.21
+contacts_reported = 4
+contact_monitor = true
 
 [node name="HeadSprite" type="Sprite" parent="Character/HeadRigitBody2D"]
 position = Vector2( -31, -137 )

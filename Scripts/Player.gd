@@ -54,6 +54,7 @@ func use_fuel(delta):
 
 
 func _on_GameOverTimer_timeout():
+	print("Reload current scene")
 	get_tree().reload_current_scene()
 
 
