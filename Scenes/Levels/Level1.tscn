@@ -10,8 +10,8 @@
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=10]
-[ext_resource path="res://Images/Other/Clouds.png" type="Texture" id=11]
-[ext_resource path="res://Images/Other/SceneBG.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/ParallaxBackgroundHorizont.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/ParallaxBackgroundClouds.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Images/Terrain/Grass.png" type="Texture" id=13]
 [ext_resource path="res://Images/Terrain/DirtBG.png" type="Texture" id=14]
 [ext_resource path="res://Scripts/LevelManager.gd" type="Script" id=15]
@@ -422,7 +422,7 @@ polygon = PoolVector2Array( -1356.77, 746.018, -1291.18, 755.559, -1227.57, 756.
 position = Vector2( 16894, 196 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( -1061, 221 )
+position = Vector2( 15864, -141 )
 rotation = 0.00105882
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -489,24 +489,6 @@ position = Vector2( 9455, -813 )
 [node name="Fuel2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 5065, 534 )
 
-[node name="ParallaxBackgroundClouds" type="ParallaxBackground" parent="."]
+[node name="ParallaxBackgroundClouds" parent="." instance=ExtResource( 12 )]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackgroundClouds"]
-motion_scale = Vector2( 0.2, 0.2 )
-motion_mirroring = Vector2( 3000, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackgroundClouds/ParallaxLayer"]
-position = Vector2( -169, -1060 )
-texture = ExtResource( 11 )
-centered = false
-
-[node name="ParallaxBackgroundHorizont" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackgroundHorizont"]
-motion_scale = Vector2( 0.1, 0.1 )
-motion_mirroring = Vector2( 3000, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackgroundHorizont/ParallaxLayer"]
-position = Vector2( -330, -116 )
-texture = ExtResource( 12 )
-centered = false
+[node name="ParallaxBackgroundHorizont" parent="." instance=ExtResource( 11 )]

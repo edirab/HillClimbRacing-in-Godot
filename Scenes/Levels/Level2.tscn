@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=2]
+[gd_scene load_steps=125 format=2]
 
 [ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=1]
 [ext_resource path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" type="Script" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://addons/rmsmartshape/vertex_properties.gd" type="Script" id=14]
 [ext_resource path="res://addons/rmsmartshape/shapes/point_array.gd" type="Script" id=15]
 [ext_resource path="res://addons/rmsmartshape/shapes/point.gd" type="Script" id=16]
+[ext_resource path="res://Scenes/ParallaxBackgroundHorizont.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/ParallaxBackgroundClouds.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Resource" id=123]
 script = ExtResource( 14 )
@@ -780,15 +782,14 @@ extents = Vector2( 1645.5, 713.5 )
 script = ExtResource( 13 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( -849, 679 )
+position = Vector2( -44, 823 )
 rotation = -0.00193667
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 rotation = 0.606794
 current = true
-zoom = Vector2( 3.7, 3.7 )
-offset_h = 0.6
-offset_v = 0.01
+zoom = Vector2( 1.7, 1.7 )
+offset_h = 0.64
 drag_margin_left = 0.7
 editor_draw_drag_margin = true
 
@@ -799,6 +800,9 @@ position = Vector2( 77322, -3808 )
 
 [node name="StaticGround1" type="StaticBody2D" parent="." groups=["ground"]]
 position = Vector2( 521, -1918 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Ground1" type="Node2D" parent="StaticGround1"]
 script = ExtResource( 10 )
@@ -821,6 +825,9 @@ polygon = PoolVector2Array( 14731.2, 2254.78, 15093.8, 2236, 15444.3, 2185.61, 1
 
 [node name="StaticGround2" type="StaticBody2D" parent="." groups=["ground"]]
 position = Vector2( 28499, -1347 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Ground2" type="Node2D" parent="StaticGround2"]
 script = ExtResource( 10 )
@@ -843,6 +850,9 @@ polygon = PoolVector2Array( 13974.1, 2345.21, 16108.2, 1957.86, 20046.3, 1775.9,
 
 [node name="StaticGround3" type="StaticBody2D" parent="." groups=["ground"]]
 position = Vector2( 54465, -1918 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Ground3" type="Node2D" parent="StaticGround3"]
 script = ExtResource( 10 )
@@ -865,6 +875,9 @@ polygon = PoolVector2Array( 14193.8, 2146.55, 14148.1, 5397.56, -2752.97, 5596.8
 
 [node name="StaticGround4" type="StaticBody2D" parent="." groups=["ground"]]
 position = Vector2( 72935, -1945 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Ground4" type="Node2D" parent="StaticGround4"]
 script = ExtResource( 10 )
@@ -895,28 +908,226 @@ position = Vector2( 13203, -844 )
 position = Vector2( 32043, -355 )
 
 [node name="Fuel5" parent="." instance=ExtResource( 8 )]
-position = Vector2( 47721, 130 )
+position = Vector2( 48526, 209 )
 
 [node name="Fuel_in_air" parent="." instance=ExtResource( 8 )]
-position = Vector2( 22939, -2878 )
+position = Vector2( 22925, -2992 )
 
 [node name="Fuel6" parent="." instance=ExtResource( 8 )]
 position = Vector2( 70231, -403 )
 
 [node name="Coin" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1808, 715 )
+position = Vector2( 1199, 797 )
+
+[node name="Coin6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2139, 707 )
+
+[node name="Coin7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2891, 108 )
+
+[node name="Coin8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3653, -518 )
+
+[node name="Coin9" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4446, -902 )
+
+[node name="Coin10" parent="." instance=ExtResource( 9 )]
+position = Vector2( 5124, -911 )
+
+[node name="Coin21" parent="." instance=ExtResource( 9 )]
+position = Vector2( 5801, -678 )
+
+[node name="Coin11" parent="." instance=ExtResource( 9 )]
+position = Vector2( 6662, 291 )
+
+[node name="Coin12" parent="." instance=ExtResource( 9 )]
+position = Vector2( 7556, 493 )
+
+[node name="Coin13" parent="." instance=ExtResource( 9 )]
+position = Vector2( 8631, 656 )
+
+[node name="Coin14" parent="." instance=ExtResource( 9 )]
+position = Vector2( 9653, 653 )
+
+[node name="Coin15" parent="." instance=ExtResource( 9 )]
+position = Vector2( 10589, 367 )
+
+[node name="Coin16" parent="." instance=ExtResource( 9 )]
+position = Vector2( 11471, -73 )
+
+[node name="Coin17" parent="." instance=ExtResource( 9 )]
+position = Vector2( 12447, -571 )
+
+[node name="Coin18" parent="." instance=ExtResource( 9 )]
+position = Vector2( 14046, -797 )
+
+[node name="Coin19" parent="." instance=ExtResource( 9 )]
+position = Vector2( 14703, -540 )
+
+[node name="Coin20" parent="." instance=ExtResource( 9 )]
+position = Vector2( 15243, -302 )
+
+[node name="Coin22" parent="." instance=ExtResource( 9 )]
+position = Vector2( 16173, -96 )
+
+[node name="Coin23" parent="." instance=ExtResource( 9 )]
+position = Vector2( 17045, -319 )
+
+[node name="Coin24" parent="." instance=ExtResource( 9 )]
+position = Vector2( 17898, -560 )
 
 [node name="Coin2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 22149, -3159 )
+position = Vector2( 22149, -3193 )
+
+[node name="Coin25" parent="." instance=ExtResource( 9 )]
+position = Vector2( 23474, -2345 )
+
+[node name="Coin26" parent="." instance=ExtResource( 9 )]
+position = Vector2( 23999, -1760 )
+
+[node name="Coin27" parent="." instance=ExtResource( 9 )]
+position = Vector2( 24423, -1076 )
 
 [node name="Coin3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 24733, -619 )
+position = Vector2( 24880, -330 )
 
 [node name="Coin4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 25558, 111 )
+position = Vector2( 25578, 295 )
 
 [node name="Coin5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 26370, 767 )
+position = Vector2( 26337, 862 )
+
+[node name="Coin28" parent="." instance=ExtResource( 9 )]
+position = Vector2( 27217, 1261 )
+
+[node name="Coin29" parent="." instance=ExtResource( 9 )]
+position = Vector2( 28160, 1331 )
+
+[node name="Coin30" parent="." instance=ExtResource( 9 )]
+position = Vector2( 29089, 1339 )
+
+[node name="Coin31" parent="." instance=ExtResource( 9 )]
+position = Vector2( 29995, 1245 )
+
+[node name="Coin32" parent="." instance=ExtResource( 9 )]
+position = Vector2( 30661, 534 )
+
+[node name="Coin33" parent="." instance=ExtResource( 9 )]
+position = Vector2( 31258, -85 )
+
+[node name="Coin34" parent="." instance=ExtResource( 9 )]
+position = Vector2( 32822, -181 )
+
+[node name="Coin35" parent="." instance=ExtResource( 9 )]
+position = Vector2( 33367, 326 )
+
+[node name="Coin36" parent="." instance=ExtResource( 9 )]
+position = Vector2( 33905, 898 )
+
+[node name="Coin37" parent="." instance=ExtResource( 9 )]
+position = Vector2( 34288, 1389 )
+
+[node name="Coin38" parent="." instance=ExtResource( 9 )]
+position = Vector2( 34732, 1873 )
+
+[node name="Coin39" parent="." instance=ExtResource( 9 )]
+position = Vector2( 35411, 2270 )
+
+[node name="Coin40" parent="." instance=ExtResource( 9 )]
+position = Vector2( 36316, 2683 )
+
+[node name="Coin41" parent="." instance=ExtResource( 9 )]
+position = Vector2( 37896, 2817 )
+
+[node name="Coin42" parent="." instance=ExtResource( 9 )]
+position = Vector2( 39078, 2377 )
+
+[node name="Coin43" parent="." instance=ExtResource( 9 )]
+position = Vector2( 39902, 1962 )
+
+[node name="Coin44" parent="." instance=ExtResource( 9 )]
+position = Vector2( 40242, 1341 )
+
+[node name="Coin45" parent="." instance=ExtResource( 9 )]
+position = Vector2( 40700, 854 )
+
+[node name="Coin46" parent="." instance=ExtResource( 9 )]
+position = Vector2( 41217, 515 )
+
+[node name="Coin47" parent="." instance=ExtResource( 9 )]
+position = Vector2( 41764, 324 )
+
+[node name="Coin48" parent="." instance=ExtResource( 9 )]
+position = Vector2( 42984, 686 )
+
+[node name="Coin49" parent="." instance=ExtResource( 9 )]
+position = Vector2( 44197, 462 )
+
+[node name="Coin50" parent="." instance=ExtResource( 9 )]
+position = Vector2( 45656, 360 )
+
+[node name="Coin51" parent="." instance=ExtResource( 9 )]
+position = Vector2( 47051, 277 )
+
+[node name="Coin52" parent="." instance=ExtResource( 9 )]
+position = Vector2( 49678, 351 )
+
+[node name="Coin53" parent="." instance=ExtResource( 9 )]
+position = Vector2( 50782, 627 )
+
+[node name="Coin54" parent="." instance=ExtResource( 9 )]
+position = Vector2( 51816, 1173 )
+
+[node name="Coin55" parent="." instance=ExtResource( 9 )]
+position = Vector2( 52916, 1088 )
+
+[node name="Coin56" parent="." instance=ExtResource( 9 )]
+position = Vector2( 54249, 1055 )
+
+[node name="Coin57" parent="." instance=ExtResource( 9 )]
+position = Vector2( 56085, 974 )
+
+[node name="Coin58" parent="." instance=ExtResource( 9 )]
+position = Vector2( 58031, 1233 )
+
+[node name="Coin59" parent="." instance=ExtResource( 9 )]
+position = Vector2( 59525, 1525 )
+
+[node name="Coin60" parent="." instance=ExtResource( 9 )]
+position = Vector2( 61637, 1550 )
+
+[node name="Coin61" parent="." instance=ExtResource( 9 )]
+position = Vector2( 64496, 1322 )
+
+[node name="Coin62" parent="." instance=ExtResource( 9 )]
+position = Vector2( 66760, 737 )
+
+[node name="Coin63" parent="." instance=ExtResource( 9 )]
+position = Vector2( 68458, 133 )
+
+[node name="Coin64" parent="." instance=ExtResource( 9 )]
+position = Vector2( 69131, -139 )
+
+[node name="Coin65" parent="." instance=ExtResource( 9 )]
+position = Vector2( 69812, -327 )
+
+[node name="Coin66" parent="." instance=ExtResource( 9 )]
+position = Vector2( 71011, -1074 )
+
+[node name="Coin67" parent="." instance=ExtResource( 9 )]
+position = Vector2( 71684, -1783 )
+
+[node name="Coin68" parent="." instance=ExtResource( 9 )]
+position = Vector2( 72638, -2163 )
+
+[node name="Coin69" parent="." instance=ExtResource( 9 )]
+position = Vector2( 73597, -2914 )
+
+[node name="Coin70" parent="." instance=ExtResource( 9 )]
+position = Vector2( 74395, -3675 )
+
+[node name="Coin71" parent="." instance=ExtResource( 9 )]
+position = Vector2( 512, 841 )
 
 [node name="Abyss1" type="Area2D" parent="." groups=["abyss"]]
 collision_layer = 5
@@ -931,6 +1142,10 @@ collision_layer = 5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Abyss2"]
 position = Vector2( 50070.5, 3334.5 )
 shape = SubResource( 122 )
+
+[node name="ParallaxBackgroundClouds" parent="." instance=ExtResource( 18 )]
+
+[node name="ParallaxBackgroundHorizont" parent="." instance=ExtResource( 17 )]
 
 [connection signal="body_entered" from="Abyss1" to="Player" method="_on_Abyss1_body_entered"]
 [connection signal="body_entered" from="Abyss2" to="Player" method="_on_Abyss2_body_entered"]
