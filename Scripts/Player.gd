@@ -34,8 +34,6 @@ func _physics_process(delta):
 	else:
 		if $GameOverTimer.is_stopped():
 			$GameOverTimer.start()
-#	if ($Character/HeadRigitBody2D.rotation_degrees < -90 || rotation_degrees > 90) && !dead:
-#		dead = true
 
 	if driving == 1:
 		use_fuel(delta)
@@ -63,3 +61,19 @@ func _on_HeadRigitBody2D_body_entered(body):
 	if body.is_in_group("ground") && !dead:
 		print("Now dead")
 		dead = true
+
+
+func _on_Abyss1_body_entered(body):
+	print("Fall is abyss 1 - ?")
+	if body.is_in_group("player") && !dead:
+		print("Fall is abyss 1")
+		dead = true
+		get_tree().reload_current_scene()
+
+
+func _on_Abyss2_body_entered(body):
+	print("Fall is abyss 2 - ?")
+	if body.is_in_group("player") && !dead:
+		print("Fall is abyss 2")
+		dead = true
+		get_tree().reload_current_scene()
