@@ -16,4 +16,9 @@ texture = ExtResource( 1 )
 position = Vector2( 13.5, -12.5 )
 shape = SubResource( 1 )
 
+[node name="LevelFinishedTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_CheckerFlag_body_entered"]
+[connection signal="timeout" from="LevelFinishedTimer" to="." method="_on_LevelFinishedTimer_timeout"]

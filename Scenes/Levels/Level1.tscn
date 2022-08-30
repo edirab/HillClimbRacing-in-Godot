@@ -422,7 +422,7 @@ polygon = PoolVector2Array( -1356.77, 746.018, -1291.18, 755.559, -1227.57, 756.
 position = Vector2( 16894, 196 )
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 15864, -141 )
+position = Vector2( -1251, 509 )
 rotation = 0.00105882
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
