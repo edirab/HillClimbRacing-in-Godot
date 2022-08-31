@@ -5,6 +5,8 @@ var speed = 60000
 var max_speed = 50
 
 var fuel = 100
+var fuel_depleating_speed = 10
+
 var dead = false
 var driving = 0
 
@@ -46,7 +48,7 @@ func refuel():
 	get_parent().update_fuel_UI(fuel)
 
 func use_fuel(delta):
-	fuel -= 10 * delta
+	fuel -= fuel_depleating_speed * delta
 	fuel = clamp(fuel, 0, 100)
 	get_parent().update_fuel_UI(fuel)
 

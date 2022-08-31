@@ -1,12 +1,21 @@
 ### Ideas 
 
 1. Add more levels, at least 10 of them.
-	Different landscape (hills, islands, stairs, vicious circles)
+	Different landscape 
+	(
+		+ hills, 
+		+ islands, 
+		stairs, 
+		vicious circles, 
+		tunnels - do not jump too high!
+	)
+	
 	Different landscape textures: 
 		- dirt + grass, 
 		- rocks, 
 		- sand + sand stone,
 		- snow + ice,
+		- city: highway + buildings on a background
 
 2. Implenet slightly different physics: 
 	less wheel friction on ice and sand, 
@@ -16,7 +25,9 @@
 	- The higher jump - the bigger reward (10 or 20 coins)
 	- Ability to choose different player skins?
 
-4. Introduce new mechanics: nitro
+4. Introduce new mechanics: 
+	- nitro + passing vicious circles
+	- portals and multilevel levels
 
 4. How about levels with inverse gravity?
 

@@ -4,5 +4,6 @@ addons/
 gut/
 
 *.import
+*.png.import
 Scripts/linux
 scripts/windows
