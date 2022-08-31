@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	$Player.max_speed = 150
+	pass
 
 var coins_collected = 0
 

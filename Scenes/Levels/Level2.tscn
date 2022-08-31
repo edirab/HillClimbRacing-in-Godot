@@ -7,8 +7,8 @@
 [ext_resource path="res://Scenes/CheckerFlag.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Fuel.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Pickups/Fuel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Pickups/Coin.tscn" type="PackedScene" id=9]
 [ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=10]
 [ext_resource path="res://Images/Terrain/Grass.png" type="Texture" id=11]
 [ext_resource path="res://Images/Terrain/DirtBG.png" type="Texture" id=12]
@@ -781,18 +781,6 @@ extents = Vector2( 1645.5, 713.5 )
 [node name="Level2" type="Node2D"]
 script = ExtResource( 13 )
 
-[node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( -44, 823 )
-rotation = -0.00193667
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-rotation = 0.606794
-current = true
-zoom = Vector2( 1.7, 1.7 )
-offset_h = 0.64
-drag_margin_left = 0.7
-editor_draw_drag_margin = true
-
 [node name="UI" parent="." instance=ExtResource( 7 )]
 
 [node name="CheckerFlag" parent="." instance=ExtResource( 5 )]
@@ -897,6 +885,18 @@ collision_polygon_node_path = NodePath("../CollisionPolygon2D")
 visible = false
 modulate = Color( 1, 1, 1, 0.3 )
 polygon = PoolVector2Array( 5685.05, -4158.13, 5889.31, 5556.11, -3727.48, 5541.83, -3781.13, 5343.92, -3865.99, 4878.15, -3881.05, 4600.21, -3875.02, 4459.83, -3857.4, 4322.29, -3826.27, 4190.38, -3805.03, 4127.43, -3779.7, 4066.94, -3750.04, 4009.27, -3715.8, 3954.78, -3676.74, 3903.8, -3632.61, 3856.72, -3588.59, 3809.19, -3549.67, 3756.97, -3515.48, 3700.45, -3485.65, 3640.01, -3437.44, 3508.96, -3401.95, 3366.93, -3325.09, 2751.75, -3282.38, 2459.72, -3249.06, 2328.57, -3228.07, 2268.07, -3203.66, 2211.48, -3175.47, 2159.18, -3143.09, 2111.58, -3106.13, 2069.06, -3064.19, 2032.03, -3041.23, 2015.7, -3016.91, 2000.87, -2991.14, 1987.6, -2963.9, 1975.94, -2904.77, 1957.66, -2839.11, 1946.47, -2804.66, 1941.38, -2770.33, 1933.76, -2701.98, 1911.3, -2633.98, 1879.75, -2566.3, 1839.75, -2431.48, 1737.15, -2296.97, 1608.87, -1750.19, 946.145, -1463.48, 600.064, -1314.77, 442.115, -1161.7, 301.368, -1003.7, 183.201, -922.664, 134.262, -840.18, 92.968, -756.172, 59.9967, -670.57, 36.0192, -583.305, 21.7064, -494.289, 17.7506, -225, -12.2058, -105.789, -38.8754, 4.07031, -72.6284, 105.289, -112.9, 198.586, -159.137, 284.656, -210.788, 364.211, -267.31, 506.633, -392.719, 631.523, -530.943, 1069.09, -1123.75, 1191.34, -1259.84, 1330.09, -1382.24, 1407.42, -1436.93, 1490.99, -1486.54, 1581.52, -1530.53, 1679.73, -1568.33, 1786.3, -1599.4, 1901.95, -1623.19, 2027.41, -1639.13, 2163.36, -1646.69, 3360.55, -1625.22, 3507.34, -1620.63, 3679.83, -1627.57, 4275.18, -1698.47, 4378.17, -1716.88, 4475.05, -1741.79, 4566, -1772.8, 4651.22, -1809.51, 4730.89, -1851.52, 4805.21, -1898.41, 4874.37, -1949.79, 4938.55, -2005.26, 5052.77, -2126.82, 5149.43, -2259.84, 5230.04, -2401.11, 5296.13, -2547.39, 5390.88, -2842.04, 5445.97, -3117.92, 5486.13, -3509.9, 5487.21, -3539.21, 5486.09, -3568.66, 5477.79, -3627.7, 5462.38, -3686.46, 5440.97, -3744.37, 5384.76, -3855.43, 5318.3, -3956.38, 5191.13, -4109.96, 5123.31, -4173.13 )
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( -44, 823 )
+rotation = -0.00193667
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+rotation = 0.606794
+current = true
+zoom = Vector2( 1.7, 1.7 )
+offset_h = 0.64
+drag_margin_left = 0.7
+editor_draw_drag_margin = true
 
 [node name="Fuel" parent="." instance=ExtResource( 8 )]
 position = Vector2( 6036, -89 )
