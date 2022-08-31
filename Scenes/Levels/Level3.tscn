@@ -1,4 +1,4 @@
-[gd_scene load_steps=151 format=2]
+[gd_scene load_steps=156 format=2]
 
 [ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=1]
 [ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=2]
@@ -16,6 +16,11 @@
 [ext_resource path="res://Scenes/Pickups/Nitro.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/CheckerFlag.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Pickups/Fuel.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/ParallaxBackgroundHorizont.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/ParallaxBackgroundClouds.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Pickups/Coin_five.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Pickups/Coin_ten.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Pickups/Coin_twentyfive.tscn" type="PackedScene" id=21]
 
 [sub_resource type="Resource" id=292]
 script = ExtResource( 4 )
@@ -1014,9 +1019,82 @@ extents = Vector2( 683.5, 1147.5 )
 [node name="Level3" type="Node2D"]
 script = ExtResource( 13 )
 
+[node name="Coin_5" parent="." instance=ExtResource( 19 )]
+position = Vector2( -1951, -4346 )
+
+[node name="Coin_6" parent="." instance=ExtResource( 19 )]
+position = Vector2( -1407, -3926 )
+
+[node name="Coin_7" parent="." instance=ExtResource( 19 )]
+position = Vector2( -1219, -3218 )
+
+[node name="Coin_8" parent="." instance=ExtResource( 19 )]
+position = Vector2( -1003, -2446 )
+
+[node name="Coin_9" parent="." instance=ExtResource( 19 )]
+position = Vector2( -819, -1746 )
+
+[node name="Coin_10" parent="." instance=ExtResource( 19 )]
+position = Vector2( -619, -1082 )
+
+[node name="Coin_11" parent="." instance=ExtResource( 19 )]
+position = Vector2( -315, -490 )
+
+[node name="Coin_12" parent="." instance=ExtResource( 19 )]
+position = Vector2( 353, 154 )
+
+[node name="Coin_14" parent="." instance=ExtResource( 20 )]
+position = Vector2( 1789, 410 )
+
+[node name="Coin_13" parent="." instance=ExtResource( 19 )]
+position = Vector2( 1209, 346 )
+
+[node name="Coin_15" parent="." instance=ExtResource( 19 )]
+position = Vector2( 3663, 580 )
+
+[node name="Coin_16" parent="." instance=ExtResource( 19 )]
+position = Vector2( 4714, 575 )
+
+[node name="Coin_17" parent="." instance=ExtResource( 19 )]
+position = Vector2( 5898, 552 )
+
+[node name="Coin_18" parent="." instance=ExtResource( 19 )]
+position = Vector2( 7082, 491 )
+
+[node name="Coin_22" parent="." instance=ExtResource( 20 )]
+position = Vector2( 8041, -532 )
+
+[node name="Coin_21" parent="." instance=ExtResource( 19 )]
+position = Vector2( 7682, 71 )
+
+[node name="Coin_19" parent="." instance=ExtResource( 19 )]
+position = Vector2( 6706, 1047 )
+
+[node name="Coin_20" parent="." instance=ExtResource( 19 )]
+position = Vector2( 7866, 1387 )
+
+[node name="Coin_ten" parent="." instance=ExtResource( 20 )]
+position = Vector2( 7935, -1034 )
+
+[node name="Coin_ten2" parent="." instance=ExtResource( 20 )]
+position = Vector2( 7513, -1536 )
+
+[node name="Coin_ten4" parent="." instance=ExtResource( 20 )]
+position = Vector2( 5697, -925 )
+
+[node name="Coin_ten5" parent="." instance=ExtResource( 20 )]
+position = Vector2( 5818, -257 )
+
 [node name="UI" parent="." instance=ExtResource( 12 )]
 
+[node name="ParallaxBackgroundClouds" parent="." instance=ExtResource( 18 )]
+
+[node name="ParallaxBackgroundHorizont" parent="." instance=ExtResource( 17 )]
+
 [node name="StaticGround1" type="StaticBody2D" parent="." groups=["ground"]]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="SS2D_Shape_Closed" type="Node2D" parent="StaticGround1"]
 script = ExtResource( 2 )
@@ -1042,6 +1120,9 @@ polygon = PoolVector2Array( -1723.63, -4071.51, -1710.35, -4058.93, -1696.93, -4
 
 [node name="StaticGround2" type="StaticBody2D" parent="." groups=["ground"]]
 position = Vector2( -1887, -2567 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="SS2D_Shape_Closed2" type="Node2D" parent="StaticGround2"]
 position = Vector2( 527, 596 )
@@ -1065,6 +1146,9 @@ modulate = Color( 1, 1, 1, 0.3 )
 polygon = PoolVector2Array( 9936.03, 1281.58, 9837.66, 1143.11, 9739.68, 1024.97, 9640.92, 925.289, 9540.22, 842.22, 9436.42, 773.9, 9328.35, 718.47, 9214.85, 674.076, 9094.75, 638.915, 8838.48, 612.298, 8603.21, 609.562, 8384.94, 633.68, 8280.92, 656.763, 8179.65, 687.747, 7997.51, 773.486, 7918.91, 821.561, 7847.08, 873.27, 7719.07, 987.936, 7604.15, 1118.32, 7503.21, 1260.92, 7454.39, 1345.19, 7410.13, 1436.9, 7372.99, 1535.16, 7345.56, 1639.08, 7330.41, 1747.74, 7328.24, 1803.58, 7330.13, 1860.27, 7354.37, 2076.96, 7372.69, 2166.3, 7395.23, 2246.41, 7422, 2319.89, 7453.06, 2389.31, 7528.23, 2526.34, 7573.38, 2593.95, 7621.92, 2655.61, 7711.6, 2759.89, 7743.94, 2801.96, 7755.04, 2820.36, 7759.08, 2828.88, 7762.05, 2836.95, 7763.83, 2844.56, 7762.89, 2857.44, 7755.6, 2872.99, 7752.87, 2875.55, 7749.75, 2877.99, 7746.23, 2880.31, 7737.94, 2884.59, 7733.02, 2886.29, 7727.4, 2887.36, 7721.13, 2887.85, 7714.21, 2887.77, 7698.53, 2885.91, 7680.55, 2881.88, 7638.38, 2867.73, 7589.1, 2846.18, 7474.94, 2784.21, 7349.42, 2702.69, 7223.89, 2608.36, 7109.7, 2507.95, 7018.21, 2408.16, 6984.55, 2360.6, 6971.35, 2337.77, 6960.8, 2315.74, 6936.72, 2278.18, 6916.7, 2241.13, 6900.23, 2204.27, 6886.78, 2167.3, 6866.86, 2091.74, 6852.73, 2011.98, 6824.9, 1829.9, 6769.65, 1601.19, 6752.15, 1536.61, 6739.6, 1472.25, 6728.12, 1344.67, 6732.82, 1219.34, 6751.29, 1097.14, 6781.12, 978.95, 6819.91, 865.657, 6914.8, 657.302, 6942.78, 608.74, 6975.61, 560.322, 7054.26, 464.32, 7147.53, 370.055, 7252.15, 278.256, 7719.64, -49.0562, 7996.52, -195.775, 8332.86, -329.298, 8508.92, -381.159, 8682.57, -417.791, 8848.03, -435.192, 8925.9, -435.434, 8999.56, -429.401, 9079.32, -412.593, 9174.28, -382.019, 9399.57, -286.151, 9920.31, -1.51099, 10398.6, 319.299, 10570.8, 460.387, 10631.3, 520.35, 10654, 546.965, 10671.2, 571.052, 10699.4, 623.796, 10726.3, 689.625, 10775.5, 852.73, 10852.6, 1250, 10894.8, 1637.75, 10900.5, 1788.95, 10899.1, 1847.03, 10894.7, 1890.84, 10885.8, 1930.39, 10871.6, 1976.36, 10829.2, 2083.89, 10706.2, 2335.2, 10443.1, 2774.26, 10414.3, 2810.3, 10377.6, 2848.69, 10284.3, 2930.2, 10043.2, 3096.19, 9777.5, 3235.68, 9653.48, 3284.06, 9596.84, 3300.93, 9544.98, 3312.13, 9124.66, 3385.87, 9035.63, 3395.16, 8997.55, 3396.51, 8964.75, 3395.18, 8950.56, 3393.41, 8937.96, 3390.85, 8927.05, 3387.43, 8922.26, 3385.39, 8917.92, 3383.13, 8902.34, 3362.09, 8901.19, 3351.75, 8901.79, 3347.33, 8902.77, 3342.91, 8904.12, 3338.48, 8907.94, 3329.6, 8913.22, 3320.68, 8919.86, 3311.71, 8927.81, 3302.67, 8947.42, 3284.34, 8999.9, 3246.36, 9066.89, 3205.92, 9405.54, 3003.34, 9552.56, 2902.97, 9672.73, 2799.93, 9948.18, 2500.58, 9983.53, 2444.68, 10015.2, 2383.35, 10043, 2317.19, 10066.7, 2246.78, 10100.7, 2095.54, 10115.1, 1934.28, 10107.9, 1767.61, 10095.6, 1683.7, 10077, 1600.18, 10052.1, 1517.63, 10020.4, 1436.63, 9981.81, 1357.75 )
 
 [node name="StaticGround3" type="StaticBody2D" parent="." groups=["ground"]]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="SS2D_Shape_Closed" type="Node2D" parent="StaticGround3"]
 script = ExtResource( 2 )
@@ -1087,6 +1171,9 @@ polygon = PoolVector2Array( 8981.44, 1909.14, 9750.63, 1913.34, 10098.7, 1887.65
 
 [node name="StaticGround4" type="StaticBody2D" parent="." groups=["ground"]]
 position = Vector2( -1035, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="SS2D_Shape_Closed" type="Node2D" parent="StaticGround4"]
 script = ExtResource( 2 )
@@ -1108,7 +1195,7 @@ modulate = Color( 1, 1, 1, 0.3 )
 polygon = PoolVector2Array( 36045.6, -3685.51, 36207.3, -3693.26, 36375.9, -3688.68, 36727.9, -3647.3, 37445.6, -3469.34, 38096.6, -3228.73, 38579, -3002.55, 41424.4, -1238.3, 42995, -153.511, 44232, 611.219, 44751.6, 876.717, 44960.2, 958.699, 45048.4, 984.299, 45124.6, 998.593, 48061.5, 1117.52, 49945.3, 1109.96, 51262.6, 1008.64, 56219.4, -356.221, 56578.9, -498.455, 57005.2, -709.031, 57916.6, -1227.56, 58989.1, -1907.93, 59018.2, 3316.94, 30701, 3064.86, 30693.3, 1364.94, 30741.9, 144.299, 30798, -296.545, 30816.2, -376.404, 30836.2, -441.778, 30846.9, -468.667, 30858.1, -491.5, 30869.8, -510.135, 30882.1, -524.425, 30950.5, -579.484, 31052.6, -647.06, 31338.1, -811.474, 33256.5, -1753.51, 33279.3, -1767.18, 33310.7, -1789.99, 34408.8, -2726.38, 35282.5, -3364.72, 35492.7, -3486.94, 35692.3, -3584.44, 35877.8, -3652.26, 35964.2, -3673.51 )
 
 [node name="Player" parent="." instance=ExtResource( 11 )]
-position = Vector2( 17, -116 )
+position = Vector2( -2626, -4435 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
@@ -1148,6 +1235,12 @@ position = Vector2( 29082, 2109 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Abyss2"]
 position = Vector2( -44.5, -184.5 )
 shape = SubResource( 291 )
+
+[node name="Coin_twentyfive" parent="." instance=ExtResource( 21 )]
+position = Vector2( 6752, -1719 )
+
+[node name="Coin_twentyfive2" parent="." instance=ExtResource( 21 )]
+position = Vector2( 6158, -1539 )
 
 [connection signal="body_entered" from="Abyss1" to="Player" method="_on_Abyss1_body_entered"]
 [connection signal="body_entered" from="Abyss2" to="Player" method="_on_Abyss2_body_entered"]
