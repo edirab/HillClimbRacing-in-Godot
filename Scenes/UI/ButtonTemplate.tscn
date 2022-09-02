@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://FredokaOne-Regular.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 62
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[node name="NewGame" type="Button"]
+margin_right = 308.0
+margin_bottom = 76.0
+custom_colors/font_color_disabled = Color( 0.443137, 0.407843, 0.407843, 1 )
+custom_colors/font_color_hover = Color( 0.376471, 0.94902, 0.364706, 1 )
+custom_colors/font_color_pressed = Color( 0, 0.384314, 0.733333, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 4 )
+text = "New game"
