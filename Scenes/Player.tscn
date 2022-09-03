@@ -84,6 +84,7 @@ one_shot = true
 stream = ExtResource( 6 )
 volume_db = -11.064
 autoplay = true
+bus = "SFX"
 
 [connection signal="body_entered" from="Character/HeadRigitBody2D" to="." method="_on_HeadRigitBody2D_body_entered"]
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_GameOverTimer_timeout"]

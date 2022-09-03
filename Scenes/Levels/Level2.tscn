@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=2]
+[gd_scene load_steps=126 format=2]
 
 [ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=1]
 [ext_resource path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" type="Script" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://addons/rmsmartshape/shapes/point.gd" type="Script" id=16]
 [ext_resource path="res://Scenes/ParallaxBackgroundHorizont.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/ParallaxBackgroundClouds.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/UI/PauseMenu.tscn" type="PackedScene" id=19]
 
 [sub_resource type="Resource" id=123]
 script = ExtResource( 14 )
@@ -782,6 +783,8 @@ extents = Vector2( 1645.5, 713.5 )
 script = ExtResource( 13 )
 
 [node name="UI" parent="." instance=ExtResource( 7 )]
+
+[node name="PauseMenu" parent="." instance=ExtResource( 19 )]
 
 [node name="CheckerFlag" parent="." instance=ExtResource( 5 )]
 position = Vector2( 77322, -3808 )

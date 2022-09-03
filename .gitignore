@@ -2,6 +2,7 @@
 .import/
 addons/
 gut/
+builds/
 
 *.import
 *.png.import

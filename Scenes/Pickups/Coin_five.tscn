@@ -22,7 +22,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "pickup"
-loop = true
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Sprite:position:y")
 tracks/0/interp = 1
@@ -79,6 +78,7 @@ anims/pickup = SubResource( 2 )
 [node name="Pickup" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -10.0
+bus = "SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
