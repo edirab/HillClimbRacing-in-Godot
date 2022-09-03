@@ -171,7 +171,7 @@ _global_script_class_icons={
 [application]
 
 config/name="HillClimb_youtube"
-run/main_scene="res://Scenes/Levels/Level1.tscn"
+run/main_scene="res://Scenes/UI/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
